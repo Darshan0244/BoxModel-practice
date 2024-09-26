@@ -5,9 +5,10 @@
     <title>CSS Box Model</title>
     <style>
       /* Write your CSS code here */
-       h1{
-        color:darkblue;
-        font-family:Georgia, 'Times New Roman', Times, serif;
+      h1{
+        text-align: center;
+        color: blue;
+        font-family: Georgia, "Times New Roman", Times, serif;
         background-color: aquamarine;
       }
       div {
@@ -18,27 +19,46 @@
         margin: 0px;
       }
       #div1 {
+        margin-left: 40px ;
         background-color: cadetblue;
         padding: 20px;
         border: 10px solid black;
       }
       #div2 {
+        padding: 20px;
         background-color: gold;
         border: solid black;
         border-width: 20px 10px;
-        margin-left: 260px;
+        margin-left: 300px;
       }
       #div3 {
+        padding: 20px;;
         background-color: indianred;
         border: 10px solid black;
         margin-left: 40px;
       }
+      /* ---------------------------------------------- Below Code For CSS Animation --------------------------------------------------*/
+      .animated-heading {
+  animation: slide-in 2s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* ----------------------------------------------------------------------------------------------------------------------------------- */
     </style>
   </head>
   <body>
-    <h1>CSS Box Model</h1>
-    
-    <div id="div1">
+    <h1 class="animated-heading">CSS Box Model</h1>
+
+    <div class="animated-heading" id="div1">
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapi
         en porttitor urna elementum lacinia. In id magna pulvinar, ultricies
@@ -47,8 +67,25 @@
         sed dolor.
       </p>
     </div>
-    <div id="div2"></div>
-    <div id="div3"></div>
+    <div class="animated-heading" id="div2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapi
+        en porttitor urna elementum lacinia. In id magna pulvinar, ultricies
+        lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque
+        magna.Phasellus dolor metus, laoreet ac convallis sit amet, efficitur
+        sed dolor.
+      </p>
+    </div>
+
+    <div class="animated-heading" id="div3">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at sapi
+        en porttitor urna elementum lacinia. In id magna pulvinar, ultricies
+        lorem id, vehicula elit. Aliquam eu luctus nisl, vitae pellentesque
+        magna.Phasellus dolor metus, laoreet ac convallis sit amet, efficitur
+        sed dolor.
+      </p>
+    </div>
 
     <!-- TODOs:
 1. Create 3 Boxes using the div element.
